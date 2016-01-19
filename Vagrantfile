@@ -16,7 +16,7 @@ Vagrant.configure(2) do |config|
     config.vm.define "el6" do |el6|
         el6.vm.box = BOX_EL6
         el6.vm.hostname = HOSTNAME_EL6
-        #el6.vm.provision :shell, path: "bootstrap-el6.sh"
+        el6.vm.provision :shell, path: "bootstrap-el6.sh"
     end
 
     config.vm.define "el7" do |el7|

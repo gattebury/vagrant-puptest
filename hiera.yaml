@@ -1,0 +1,20 @@
+---
+:backends:
+  - eyaml
+  - yaml
+
+:hierarchy:
+  - "node/%{fqdn}"
+  - "cluster/%{cluster}"
+  - common
+
+:eyaml:
+  :datadir:
+  :pkcs7_private_key: /vagrant/private_key.pkcs7.pem
+  :pkcs7_public_key: /vagrant/public_key.pkcs7.pem
+  :extension: yaml
+
+:yaml:
+  # default would be /etc/puppetlabs/code/environments/%{environment}/hieradata
+  # but we instead use the shared /puppet to avoid having to deploy every change
+  :datadir: /puppet/hieradata/

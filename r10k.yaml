@@ -1,0 +1,9 @@
+# set cachedir to something predictable
+cachedir: '/var/cache/r10k'
+
+# use the shared repo folder (PUPPET_REPO in Vagrantfile) as the source
+# and output to the expected /etc/puppetlabs/code/environments
+:sources:
+  :puppet:
+    remote: '/puppet/'
+    basedir: '/etc/puppetlabs/code/environments'
