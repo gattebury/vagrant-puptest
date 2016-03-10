@@ -22,7 +22,7 @@ Vagrant.configure(2) do |config|
     config.vm.define "el7" do |el7|
         el7.vm.box = BOX_EL7
         el7.vm.hostname = HOSTNAME_EL7
-        #el6.vm.provision :shell, path: "bootstrap-el7.sh"
+        el7.vm.provision :shell, path: "bootstrap-el7.sh"
     end
 
     # shared folder between host and guest
